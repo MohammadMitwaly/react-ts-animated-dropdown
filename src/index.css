@@ -34,3 +34,19 @@ a {
   color: var(--text-color);
   text-decoration: none;
 }
+
+.navbar {
+  height: var(--nav-size);
+  background-color: var(--bg-color);
+  padding: 0 1rem;
+  border-bottom: var(--border);
+}
+
+/* We set the width to be as wide as the container, the same goes for the height, in this case it will match --nav-size */
+/* Then we use flexbox to align the content to the end(righthand side of the screen) */
+.navbar-nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
