@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the `--template typescript` parameter for Typescript configuration.
 
+## Before running the app:
+
+```bash
+npm i
+# Or you can also do:
+yarn
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
