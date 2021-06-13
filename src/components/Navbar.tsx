@@ -1,5 +1,5 @@
 type Props = {
-  children: JSX.Element;
+  children: JSX.Element[];
 };
 
 const Navbar: React.FC<Props> = ({ children }) => {
