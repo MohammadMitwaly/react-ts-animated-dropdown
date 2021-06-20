@@ -12,9 +12,14 @@ import { ReactComponent as SettingsIcon } from "./icons/cog-outline.svg";
 function App() {
   return (
     <Navbar>
-      <NavItem icon="🍓" />
-      <NavItem icon="🍓" />
-      <NavItem icon="🍓" />
+      <NavItem icon={<AddIcon />} />
+      <NavItem icon={<NotificationsIcon />} />
+      <NavItem icon={<DocumentsIcon />} />
+
+      <NavItem icon={<ChevronUpIcon />}>
+        {/* This is where the dropdown will be */}
+        <p>Hello World!</p>
+      </NavItem>
     </Navbar>
   );
 }
