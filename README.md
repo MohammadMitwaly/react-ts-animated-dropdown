@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Credits:
 
+- Icons created by [Ionic](https://ionic.io/ionicons)
+
 ## Before running the app:
 
 ```bash
