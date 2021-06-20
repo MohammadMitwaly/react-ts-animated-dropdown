@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the `--template typescript` parameter for Typescript configuration.
 
+---
+
+## Credits:
+
 ## Before running the app:
 
 ```bash
