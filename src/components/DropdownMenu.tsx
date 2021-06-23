@@ -10,18 +10,27 @@ type Props = {};
 
 const DropdownMenu: React.FC<Props> = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState("main");
+  // This is to animate the height of the secondary menu
+  const [menuHeight, setMenuHeight] = useState(null);
 
   const handleSetActiveMenu = (val: string) =>{
     setActiveMenu(val);
   }
 
+  const calculateHeight = (element: { offsetHeight: any; }) =>{
+    const height = element.offsetHeight;
+    setMenuHeight(height);
+  }
+
   return (
-    <div className="dropdown">
+    <div className="dropdown" style={{height: menuHeight || undefined}}>
       <CSSTransition 
         in={activeMenu === "main"} 
         unmountOnExit 
         timeout={500} 
-        classNames="menu-primary">
+        classNames="menu-primary"
+        onEnter={calculateHeight}
+        >
           <div className="menu"
           >
             <DropdownItem>My Journeys</DropdownItem>
@@ -40,9 +49,20 @@ const DropdownMenu: React.FC<Props> = ({ children }) => {
         in={activeMenu === "settings"} 
         unmountOnExit 
         timeout={500} 
-        classNames="menu-secondary">
+        classNames="menu-secondary"
+        onEnter={calculateHeight}
+        >
           <div className="menu">
             <DropdownItem leftIcon={<ArrowIcon/>} goToMenu="main" activateMenu={handleSetActiveMenu}/>
+            <DropdownItem leftIcon={<SettingsIcon />} rightIcon={<ChevronUpIcon />}>
+              Settings
+            </DropdownItem>
+            <DropdownItem leftIcon={<SettingsIcon />} rightIcon={<ChevronUpIcon />}>
+              Settings
+            </DropdownItem>
+            <DropdownItem leftIcon={<SettingsIcon />} rightIcon={<ChevronUpIcon />}>
+              Settings
+            </DropdownItem>
             <DropdownItem leftIcon={<SettingsIcon />} rightIcon={<ChevronUpIcon />}>
               Settings
             </DropdownItem>
