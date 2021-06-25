@@ -4,7 +4,6 @@ import DropdownItem from "./DropdownItem";
 import { ReactComponent as ChevronUpIcon } from "../icons/chevron-up-circle-outline.svg";
 import { ReactComponent as SettingsIcon } from "../icons/cog-outline.svg";
 import { ReactComponent as ArrowIcon } from "../icons/arrow-back-circle-outline.svg";
-import "../index.css";
 
 type Props = {};
 
