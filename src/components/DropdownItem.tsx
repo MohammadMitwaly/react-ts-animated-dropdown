@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import "../index.css";
 
 type Props = {
   rightIcon?: ReactElement<any, any>;
